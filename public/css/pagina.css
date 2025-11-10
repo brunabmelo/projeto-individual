@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+  font-style: normal;
+
+}
+
+/*SUAVIZAR SCROLL*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*MENU*/
+
+.container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+
+}
+
+.header {
+  height: var(--tamanho-header);
+  overflow: hidden;
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+
+}
+
+.header .container {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  width: 56px;
+  height: 53px;
+  margin: 0;
+}
+
+.header a {
+  float: left;
+  color: #4D4D4D;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 12px;
+  border-radius: 4px;
+}
+
+
+
+.navbar {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: #e3b062;
+}
+
+.navbar a:hover {
+  background-color: #e3b062;
+}
+
+/*BANNER*/
+.banner {
+  background-image: url('../assets/img/banner-year-eevee.png');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 750px;
+  margin-top: 50px;
+}
+
+/*TEXTO1*/
+.ano-eevee {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  color: #4D4D4D;
+}
+
+.ano-eevee h1 {
+  font-size: 36px;
+}
+
+.ano-eevee p {
+  font-size: 16px;
+  text-align: left;
+}
+
+/*TEXTO2 E IMAGEM AO LADO*/
+.quem_eevee {
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+  padding: 16px;
+  color: #4D4D4D;
+}
+
+.eevee01 {
+  float: right;
+  width: 30%;
+  position: relative;
+  top: -33px;
+  margin-left: 20px;
+}
+
+.quem_eevee2 {
+  text-align: right;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  color: #4D4D4D;
+}
+
+.eevee02 {
+  float: left;
+  width: 30%;
+  position: relative;
+  top: -35px;
+  margin-right: 20px;
+
+}
+
+
+/*EFEITO ONDA FUNDO*/
+.separacao {
+  padding: 5%;
+}
+
+.onda {
+  background-image: url('../assets/img/onda.png');
+  width: 100%;
+  height: 100px;
+}
+
+.fundo-cor {
+  background-color: #fcece3;
+}
+
+
+/*BOX CAIXAS*/
+.todas-boxes {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  padding: 10px;
+}
+
+
+
+.titulo {
+  text-align: center;
+  margin: auto;
+  color: #4D4D4D;
+  padding: 10px;
+
+}
+
+.box {
+  flex: 1;
+  padding: 60px;
+  padding: 120px;
+  margin: -80px;
+}
+
+.image-redonda {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10%;
+
+}
+
+.image-redonda img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.box p {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #4D4D4D;
+}
+
+/*SOBRE MIM*/
+.sobre {
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+  padding: 16px;
+  color: #4D4D4D;
+}
+
+/*GALERIA*/
+
+.galeria {
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+  padding: 16px;
+  color: #4D4D4D;
+}
+
+
+
+
+/*RODAPÉ*/
+
+.footer {
+  background-color: #EAD8C5;
+}
+
+.container-footer {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.footer .container-footer {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.footer .container .version {
+  font-size: 12px;
+}
+
+.eevee-fim {
+  width: 20%;
+  float: right;
+  position: relative;
+  top: -60px;
+  margin-left: 20px;
+}
+
+.footer a {
+  float: left;
+  color: #4D4D4D;
+  text-align: center;
+  padding: 12px;
+  font-size: 18px;
+  line-height: 12px;
+  border-radius: 4px;
+}
+
+.navbar-footer {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  flex-direction: column;
+}
+
+.navbar-footer a:hover {
+  text-decoration: none;
+}
