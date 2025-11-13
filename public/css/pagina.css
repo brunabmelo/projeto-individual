@@ -234,6 +234,12 @@ html {
 
 .footer {
   background-color: #EAD8C5;
+
+}
+
+.footer1 {
+  margin-top: 40px;
+  /*ajustar o loguin*/
 }
 
 .container-footer {
@@ -288,6 +294,12 @@ html {
   padding-bottom: 50px;
 
 }
+
+.login1 {
+  margin-top: 70px;
+  /*ajustar o loguin*/
+}
+
 
 .login .container {
   justify-content: center;
@@ -364,12 +376,14 @@ html {
   height: 30px;
   align-self: center;
   margin-top: 20px;
-  
+
 }
+
 .botao:active {
   background-color: #faf0dc;
-  color: #4D4D4D; 
+  color: #4D4D4D;
 }
+
 .loading-div {
   width: 50px;
   display: none;
