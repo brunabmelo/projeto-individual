@@ -1,82 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Página Inicial</title>
+    <title>My Eevee</title>
+    <!--<script src="./js/sessao.js"></script>-->
+    <script src="./js/site.js"></script>
 
-    <script src="./js/sessao.js"></script>
-
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/pagina.css">
     <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
 <body>
+    <!--MENU SITE-->
     <div class="header">
-      <div class="container">
-        <h1 class="titulo">AquaTech</h1>
-        <ul class="navbar">
-          <li class="agora">
-            <a href="#">Inicial</a>
-          </li>
-          <li>
-            <a href="simulador.html">Simulador</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="cadastro.html">Cadastro</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  
-    <div class="banner">
-      <div class="container">
-        <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
-      </div>
-    </div>
-  
-    <div class="social">
-      <div class="container">
-        <div class="boxes">
-          <div class="box">
-            <img src="assets/imgs/planet-earth_color.png">
-            <h4>Missão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/lightbulb_color.png">
-            <h4>Visão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/growth_color.png">
-            <h4>Valores</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
+        <div class="container">
+
+            <!--icone clicavel -->
+            <a href="#inicio">
+                <img src="assets/logo/iconLogo-1.png" class="logo">
+            </a>
+            <ul class="navbar">
+                <li class="agora">
+                    <a href="#inicio">Inicio</a>
+                </li>
+                <li>
+                    <a href="#quem_e_eevee">Quem é Eevee</a>
+                </li>
+                <li>
+                    <a href="#historia">História</a>
+                </li>
+                <li>
+                    <a href="#sobre_mim">Sobre Mim</a>
+                </li>
+                <li>
+                    <a href="#galeria">Galeria</a>
+                </li>
+                <li>|</li>
+
+                <!--Cadastro -->
+                <li>
+                    <a href="login.html">Entrar</a>
+                </li>
+                <li class="botao-menu">
+                    <a href="cadastro.html">Cadastrar</a>
+                </li>
+            </ul>
         </div>
-      </div>
     </div>
-  
+
+    <!--BANNER + TEXTO1-->
+    <section id="inicio">
+        <div class="banner"></div>
+    </section>
+    <div class="ano-eevee">
+
+        <h1>2025 é o Ano do Eevee</h1>
+        <p><b>"Year to Eevee"</b> é a celebração oficial do <b>Pokémon Center</b>, que declarou 2025 o <b>"Ano do
+                Eevee"</b> para comemorar o Pokémon e suas evoluções. O evento inclui o lançamento de uma ampla gama
+            de produtos exclusivos relacionados ao Eevee, como pelúcias, figuras, colecionáveis do TCG
+            (Trading Card Game) e acessórios.</p>
+    </div>
+
+    <!--TEXTO2-->
+    <section id="quem_e_eevee">
+        <div class="quem_eevee">
+
+            <img src="assets/img/Eevee-lets-go-eevee.png" class="eevee01">
+
+            <h1>Mas Quem é Eevee?</h1>
+            <p>Eevee é um Pokémon com códigos genéticos instáveis. Isso lhes dá a capacidade de
+                evoluir para uma das oito evoluções diferentes, conhecidas como Eeveelutions, desencadeadas
+                pelo ambiente, hora do dia, níveis de amizade ou pelo uso das pedras evolutivas como: Pedra da Água,
+                Pedra do Trovão , Pedra do Fogo , Pedra da Folha ( Geração VIII ) e Pedra do Gelo (Geração VIII).</p>
+        </div>
+        <div class="quem_eevee2">
+            <img src="assets/img/Eevee-Gigantamax.webp" class="eevee02">
+
+            <p id="segundalinha"><br>Além disso, Eevee possui duas formas : o Eevee parceiro e o
+                Eevee Gigantamax. Ele pode Gigantamaxizar para Eevee Gigantamax lembrando um kaiju.</p>
+        </div>
+    </section>
+
+    <!--EFEITO FUNDO-->
+    <div class="separacao"></div>
+    <div class="onda"></div>
+    <div class="fundo-cor">
+
+        <!--BOXES  HISTORIA-->
+        <section id="historia">
+
+            <div class="titulo">
+
+                <h1>Eevee Histórias em Vários Mundos!</h1>
+            </div>
+            <div class="todas-boxes">
+                <div class="box">
+                    <img src="assets/img/manga-eevee.png" class="image-redonda">
+                    <p>No mangá Pokémon Adventures Eevee é submetido a um experimento que lhe permite alterar
+                        entre suas três primeiras evoluções (Vaporeon, Jolteon e Flareon) e sua forma básica.
+                        Este processo lhe causou grandes sofrimento e traumas.</p>
+                </div>
+
+                <div class="box">
+                    <img src="assets/img/eevee-anime.jpg" class="image-redonda">
+                    <p>Nos animes Pokémon Eevee é uns dos poucos Pokémons que demonstra personalidades diferentes
+                        chegando a ter seu rosto parecido com o de seu Treinador. Sua popularidade se tornou tão
+                        grande que se tornou o segundo mascote a representar a empresa Pokémon Company.</p>
+                </div>
+
+                <div class="box">
+                    <img src="assets/img/eevee-game.jpg" class="image-redonda">
+                    <p>Nos jogos de Pokémon Eevee é sempre retratado como um Pokémon que possui a composição genética
+                        instável, causando uma "interpretação errada" sobre sua existencia fazendo com que os fãs
+                        criam teorias sobre sua origem.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--SOBRE MIM-->
+        <section id="sobre_mim">
+
+            <div class="sobre">
+                <h1>Sobre Mim</h1>
+                <p>Me chamo Bruna e ao longo da minha vida me encantei pelo Pokémon Eevee por causa de suas múltiplas
+                    formas
+                    e por ser o simbolismo de mudança e adaptação. Assim como ele, durante o nosso percurso de vida
+                    podemos
+                    carregar traumas ou ser mal compreendidos, mesmo assim precisamos nos adaptar e independentemente
+                    das
+                    mudanças,temos que continuar tentando descobrir qual é a nossa melhor forma.<br>
+                    O Eevee me lembra que ser diferente é algo especial, e não um defeito, mesmo quando nos sentimos
+                    excluídos,
+                    ainda haverá pessoas que irão nos amar pelo que somos.</p>
+            </div>
+
+        </section>
+
+
+        <!--Galeria-->
+        <section id="galeria">
+            <div class="galeria">
+                <h1>Galeria</h1>
+            </div>
+        </section>
+
+    </div>
+
+
+    <!--RODAPÉ-->
     <div class="footer">
-      <div class="container">
-        <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-        <span class="version">v1.0.0</span>
-      </div>
+        <div class="container-footer">
+            <img src="assets/img/eevee-front.webp" class="eevee-fim">
+            <ul class="navbar-footer">
+                <li>
+                    <a href="#inicio">Inicio</a>
+                </li>
+                <li>
+                    <a href="#quem_e_eevee">Quem é Eevee</a>
+                </li>
+                <li>
+                    <a href="#historia">História</a>
+                </li>
+                <li>
+                    <a href="#sobre_mim">Sobre Mim</a>
+                </li>
+                <li>
+                    <a href="#galeria">Galeria</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </body>
+    </footer>
+</body>
 
 </html>
