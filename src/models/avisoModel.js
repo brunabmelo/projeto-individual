@@ -7,14 +7,14 @@ function listar() {
             a.id AS idAviso,
             a.titulo,
             a.descricao,
-            a.fk_usuario,
+            a.fkusuario,
             u.id AS idUsuario,
             u.nome,
             u.email,
             u.senha
         FROM aviso a
             INNER JOIN usuario u
-                ON a.fk_usuario = u.id;
+                ON a.fkusuario = u.id;
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -27,7 +27,7 @@ function pesquisarDescricao(texto) {
             a.id AS idAviso,
             a.titulo,
             a.descricao,
-            a.fk_usuario,
+            a.fkusuario,
             u.id AS idUsuario,
             u.nome,
             u.email,

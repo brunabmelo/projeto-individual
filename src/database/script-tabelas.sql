@@ -6,7 +6,7 @@ CREATE TABLE usuario (
 	nome VARCHAR(45),
     sobrenome VARCHAR(100),
 	email VARCHAR(100),
-	senha VARCHAR(8)
+	senha VARCHAR(45)
 );
 
 CREATE TABLE mascote (
