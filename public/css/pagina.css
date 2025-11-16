@@ -397,3 +397,22 @@ html {
 #div_erros_login {
   display: none
 }
+
+
+/* ALERTAS */
+.alerta_erro{
+  display: flex;
+  justify-content: center;
+}
+.card_erro {
+  display: none;
+    background-color: #fff;
+    color: #ED145B;
+    width: 330px;
+    padding: 10px;
+}
+
+.card_erro #mensagem_erro{
+  font-weight: 500;
+  font-size: 20px;
+}
