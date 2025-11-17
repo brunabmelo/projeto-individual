@@ -62,7 +62,8 @@
             </p>
 
             <div id="barraxp" class="outer">
-                <div id="progress" class="inner"></div>
+                <div id="progress" class="inner" style="width: 0px;"></div>
+
             </div>
         </div>
 
@@ -85,43 +86,84 @@
     <script>
         var barracor = document.getElementById("barraxp");
         var progresscontagem = document.getElementById("progress");
+        var nivel = progresscontagem.clientWidth;
         var comida = 0;
         var agua = 0;
         var carinho = 0;
 
+        // AÇÃO COMIDA
         function Comida() {
             if (progresscontagem.clientWidth >= barracor.clientWidth) {
-                window.location = "./dashboard/dashboard.html";
+                evolucao();
+            } else {
+
+                pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
+                setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
+
+                progresscontagem.style.width = progresscontagem.offsetWidth + 30 + "px";
+                comida++;
+
+                function atualizar() {
+                    nivel = progresscontagem.clientWidth;
+                    msg.innerHTML = nivel
+                }
+                atualizar()
             }
 
-            pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
-            setTimeout(function() { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
-
-            progresscontagem.style.width = progresscontagem.offsetWidth + 30 + "px";
-            comida++;
-            
         }
+        
 
+        // AÇÃO ÁGUA    
         function Agua() {
             if (progresscontagem.clientWidth >= barracor.clientWidth) {
-                window.location = "./dashboard/dashboard.html";
-            }
-            pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
-            setTimeout(function() { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
+                evolucao();
+            } else {
+                pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
+                setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
 
-            progresscontagem.style.width = progresscontagem.offsetWidth + 30 + "px";
-            agua++;
+                progresscontagem.style.width = progresscontagem.offsetWidth + 30 + "px";
+                agua++;
+
+                function atualizar() {
+                    nivel = progresscontagem.clientWidth;
+                    msg.innerHTML = nivel
+                }
+                atualizar()
+            }
         }
 
+        // AÇÃO CARINHO
         function Carinho() {
             if (progresscontagem.clientWidth >= barracor.clientWidth) {
-                window.location = "./dashboard/dashboard.html";
-            }
-            pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
-            setTimeout(function() { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
 
-            progresscontagem.style.width = progresscontagem.offsetWidth + 30 + "px";
-            carinho++;
+                evolucao();
+            } else {
+                pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
+                setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
+
+                progresscontagem.style.width = progresscontagem.offsetWidth + 30 + "px";
+                carinho++;
+
+                function atualizar() {
+                    nivel = progresscontagem.clientWidth;
+                    msg.innerHTML = nivel
+                }
+                atualizar()
+            }
+        }
+        // EVOLUÇÃO
+        function evolucao() {
+
+            if (comida > agua && comida > carinho) {
+                pet.innerHTML = `<img src="../assets/logo/iconLogo-2.png">`
+            }
+            else if (agua > comida && agua > carinho) {
+                pet.innerHTML = `<img src="../assets/logo/iconLogo-4.png">`
+            }
+            else if (carinho > comida && carinho > agua) {
+
+                pet.innerHTML = `<img src="../assets/logo/iconLogo-3.png">`
+            }
         }
     </script>
 
