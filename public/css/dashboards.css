@@ -74,7 +74,7 @@ body {
 }
 
 .btn-nav {
-  width: 40%;
+  width: 45%;
   color: white;
   background-color: #904101;
   border-radius: 5px;
@@ -83,7 +83,7 @@ body {
 }
 
 .btn-nav-white {
-  width: 40%;
+  width: 45%;
   background-color: white;
   border: 3px solid #904101;
   border-radius: 5px;
@@ -95,6 +95,7 @@ body {
   color: #904101;
   padding: 0;
   margin: 0;
+  font-size: 1rem;
 }
 
 .btn-nav h3,
