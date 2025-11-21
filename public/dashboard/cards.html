@@ -103,7 +103,7 @@
                 pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
                 setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
 
-                progresscontagem.style.width = progresscontagem.offsetWidth + 30 + "px";
+                progresscontagem.style.width = progresscontagem.offsetWidth + 50 + "px";
                 comida++;
 
                 function atualizar() {
@@ -126,7 +126,7 @@
                 pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
                 setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
 
-                progresscontagem.style.width = progresscontagem.offsetWidth + 30 + "px";
+                progresscontagem.style.width = progresscontagem.offsetWidth + 50 + "px";
                 agua++;
 
                 function atualizar() {
@@ -149,7 +149,7 @@
                 pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
                 setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
 
-                progresscontagem.style.width = progresscontagem.offsetWidth + 30 + "px";
+                progresscontagem.style.width = progresscontagem.offsetWidth + 50 + "px";
                 carinho++;
 
                 function atualizar() {
@@ -176,9 +176,8 @@
             }
         }
 
-        //CADASTRO NO BD
-     
-            
+        //CADASTRO NO BD EVOLUÇÃO
+    
             function cadastrar() {
                 fetch('/grafico/cadastrar', {
                     method: "POST",
@@ -208,6 +207,38 @@
                         console.log(`#ERRO: ${resposta}`);
                     });
 
+            }
+
+
+
+            //CADASTRO NO BD MASCOTE
+            function cadastrar() {
+                fetch('/mascote/cadastrar', {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+
+                        nivelVar: nivel
+                    }),
+                })
+                    .then(function (resposta) {
+                        console.log("resposta: ", resposta);
+                        console.log(`ENTREI FUNCTION`);
+
+                        if (resposta.ok) {
+
+                            console.log("ok FET")
+
+
+                        } else {
+                            console.log("Erro FET")
+                        }
+                    })
+                    .catch(function (resposta) {
+                        console.log(`#ERRO: ${resposta}`);
+                    });
 
             }
         
