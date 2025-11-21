@@ -197,3 +197,19 @@ img {
   box-shadow: 0 5px #34121f;
   transform: translateY(4px);
 }
+
+/* Grafico */
+.dash-fundo {
+  width: 80%;
+  position: relative;
+  top: 0;
+  left: 40%;
+  background-color: #fff;
+  height: 100vh;
+  overflow: auto;
+}
+
+#pizza {
+  max-width: 570px;
+  max-height: 570px;
+}
