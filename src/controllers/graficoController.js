@@ -14,6 +14,8 @@ function cadastrar(req, res) {
     var acao = req.body.acaoVar;
     var xp = req.body.xpVar;
 
+    console.log('estou no graficoController')
+
     graficoModel.cadastrar(acao, xp)
     .then(
         function (resposta) {

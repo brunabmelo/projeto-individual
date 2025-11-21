@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./../css/dashboards.css">
 
     <script src="../js/sessao.js"></script>
-    <script src="../js/alerta.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
@@ -112,6 +111,7 @@
                     msg.innerHTML = nivel
                 }
                 atualizar()
+                cadastrar()
             }
 
         }
@@ -134,6 +134,7 @@
                     msg.innerHTML = nivel
                 }
                 atualizar()
+                cadastrar()
             }
         }
 
@@ -156,6 +157,7 @@
                     msg.innerHTML = nivel
                 }
                 atualizar()
+                cadastrar()
 
             }
         }
@@ -175,21 +177,40 @@
         }
 
         //CADASTRO NO BD
-        function cadastrar() {
-            fetch('/grafico/cadastrar', {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
+     
+            
+            function cadastrar() {
+                fetch('/grafico/cadastrar', {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
 
-                    acaoVar: acao,
-                    xpVar:nivel
-                }),
-            })
+                        acaoVar: acao,
+                        xpVar: nivel
+                    }),
+                })
+                    .then(function (resposta) {
+                        console.log("resposta: ", resposta);
+                        console.log(`ENTREI FUNCTION`);
+
+                        if (resposta.ok) {
+
+                            console.log("ok FET")
 
 
-        }
+                        } else {
+                            console.log("Erro FET")
+                        }
+                    })
+                    .catch(function (resposta) {
+                        console.log(`#ERRO: ${resposta}`);
+                    });
+
+
+            }
+        
 
 
     </script>

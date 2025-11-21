@@ -62,8 +62,14 @@ JOIN evolucao e
 ON idmascote = fkmascote;
 
 
-SELECT COUNT(acao)
+SELECT COUNT(acao) Comida
 FROM evolucao
 WHERE acao = 'Comida' AND fkmascote = 1;
 
+SELECT COUNT(acao) Agua
+FROM evolucao
+WHERE acao = 'Água' AND fkmascote = 1;
 
+SELECT COUNT(acao) Carinho
+FROM evolucao
+WHERE acao = 'Carinho' AND fkmascote = 1;
