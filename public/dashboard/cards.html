@@ -72,9 +72,9 @@
         </div>
 
         <div class="interacao">
-            <button class="botao" onclick="Comida()">Comida</button>
-            <button class="botao" onclick="Agua()">Água</button>
-            <button class="botao" onclick="Carinho()">Carinho</button>
+            <button class="botao" onclick="Comida()" id="botaos" value="comida">Comida</button>
+            <button class="botao" onclick="Agua()" id="botaos" value="água">Água</button>
+            <button class="botao" onclick="Carinho()" id="botaos" value="carinho">Carinho</button>
         </div>
         <div id="msg"></div>
 
@@ -85,18 +85,21 @@
 
     <script>
         b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
         var barracor = document.getElementById("barraxp");
         var progresscontagem = document.getElementById("progress");
         var nivel = progresscontagem.clientWidth;
         var comida = 0;
         var agua = 0;
         var carinho = 0;
+        var acao = "";
 
         // AÇÃO COMIDA
         function Comida() {
             if (progresscontagem.clientWidth >= barracor.clientWidth) {
                 evolucao();
             } else {
+                acao = "Comida"
 
                 pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
                 setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
@@ -112,13 +115,14 @@
             }
 
         }
-        
+
 
         // AÇÃO ÁGUA    
         function Agua() {
             if (progresscontagem.clientWidth >= barracor.clientWidth) {
                 evolucao();
             } else {
+                acao = "Água"
                 pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
                 setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
 
@@ -139,6 +143,8 @@
 
                 evolucao();
             } else {
+                acao = "Carinho"
+
                 pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
                 setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
 
@@ -150,6 +156,7 @@
                     msg.innerHTML = nivel
                 }
                 atualizar()
+
             }
         }
         // EVOLUÇÃO
@@ -167,7 +174,24 @@
             }
         }
 
-    
+        //CADASTRO NO BD
+        function cadastrar() {
+            fetch('/grafico/cadastrar', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+
+                    acaoVar: acao,
+                    xpVar:nivel
+                }),
+            })
+
+
+        }
+
+
     </script>
 
 </html>
