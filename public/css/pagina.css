@@ -8,10 +8,13 @@ body {
 
 }
 
+
 /*SUAVIZAR SCROLL*/
+
 html {
   scroll-behavior: smooth;
 }
+
 
 /*MENU*/
 
@@ -81,7 +84,9 @@ html {
   color: #4D4D4D;
 }
 
+
 /*BANNER*/
+
 .banner {
   background-image: url('../assets/img/banner-year-eevee.png');
   background-position: top;
@@ -91,7 +96,9 @@ html {
   margin-top: 50px;
 }
 
-/*TEXTO1*/
+
+/*ANO DO EEVEE*/
+
 .ano-eevee {
   text-align: center;
   max-width: 900px;
@@ -109,7 +116,9 @@ html {
   text-align: left;
 }
 
-/*TEXTO2 E IMAGEM AO LADO*/
+
+/*QUEM É - IMAGEM AO LADO*/
+
 .quem_eevee {
   text-align: left;
   max-width: 900px;
@@ -145,6 +154,7 @@ html {
 
 
 /*EFEITO ONDA FUNDO*/
+
 .separacao {
   padding: 5%;
 }
@@ -160,15 +170,14 @@ html {
 }
 
 
-/*BOX CAIXAS*/
+/*BOX CAIXAS -  HISTÓRIA*/
+
 .todas-boxes {
   display: flex;
   justify-content: space-between;
   padding: 20px;
   padding: 10px;
 }
-
-
 
 .titulo {
   text-align: center;
@@ -208,7 +217,9 @@ html {
   color: #4D4D4D;
 }
 
+
 /*SOBRE MIM*/
+
 .sobre {
   text-align: left;
   max-width: 900px;
@@ -217,9 +228,10 @@ html {
   color: #4D4D4D;
 }
 
-/*GALERIA*/
 
-.galeria {
+/*CURIOSIDADE*/
+
+.curiosidade {
   text-align: left;
   max-width: 900px;
   margin: auto;
@@ -229,12 +241,10 @@ html {
 
 
 
-
 /*RODAPÉ*/
 
 .footer {
   background-color: #EAD8C5;
-
 }
 
 .footer1 {
@@ -299,7 +309,6 @@ html {
   margin-top: 70px;
   /*ajustar o loguin*/
 }
-
 
 .login .container {
   justify-content: center;
@@ -400,19 +409,20 @@ html {
 
 
 /* ALERTAS */
-.alerta_erro{
+.alerta_erro {
   display: flex;
   justify-content: center;
 }
+
 .card_erro {
   display: none;
-    background-color: #fff;
-    color: #ED145B;
-    width: 330px;
-    padding: 10px;
+  background-color: #fff;
+  color: #ED145B;
+  width: 330px;
+  padding: 10px;
 }
 
-.card_erro #mensagem_erro{
+.card_erro #mensagem_erro {
   font-weight: 500;
   font-size: 20px;
 }

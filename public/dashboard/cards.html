@@ -10,7 +10,7 @@
 
 
     <link rel="stylesheet" href="./../css/dashboards.css">
-
+    <link rel="icon" href="./assets/icon/favicon2.ico">
     <script src="../js/sessao.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
@@ -177,71 +177,71 @@
         }
 
         //CADASTRO NO BD EVOLUÇÃO
-    
-            function cadastrar() {
-                fetch('/grafico/cadastrar', {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
 
-                        acaoVar: acao,
-                        xpVar: nivel
-                    }),
+        function cadastrar() {
+            fetch('/grafico/cadastrar', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+
+                    acaoVar: acao,
+                    xpVar: nivel
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("resposta: ", resposta);
+                    console.log(`ENTREI FUNCTION`);
+
+                    if (resposta.ok) {
+
+                        console.log("ok FET")
+
+
+                    } else {
+                        console.log("Erro FET")
+                    }
                 })
-                    .then(function (resposta) {
-                        console.log("resposta: ", resposta);
-                        console.log(`ENTREI FUNCTION`);
+                .catch(function (resposta) {
+                    console.log(`#ERRO: ${resposta}`);
+                });
 
-                        if (resposta.ok) {
-
-                            console.log("ok FET")
-
-
-                        } else {
-                            console.log("Erro FET")
-                        }
-                    })
-                    .catch(function (resposta) {
-                        console.log(`#ERRO: ${resposta}`);
-                    });
-
-            }
+        }
 
 
 
-            //CADASTRO NO BD MASCOTE
-            function cadastrar() {
-                fetch('/mascote/cadastrar', {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
+        //CADASTRO NO BD MASCOTE
+        function cadastrar() {
+            fetch('/mascote/cadastrar', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
 
-                        nivelVar: nivel
-                    }),
+                    nivelVar: nivel
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("resposta: ", resposta);
+                    console.log(`ENTREI FUNCTION`);
+
+                    if (resposta.ok) {
+
+                        console.log("ok FET")
+
+
+                    } else {
+                        console.log("Erro FET")
+                    }
                 })
-                    .then(function (resposta) {
-                        console.log("resposta: ", resposta);
-                        console.log(`ENTREI FUNCTION`);
+                .catch(function (resposta) {
+                    console.log(`#ERRO: ${resposta}`);
+                });
 
-                        if (resposta.ok) {
+        }
 
-                            console.log("ok FET")
-
-
-                        } else {
-                            console.log("Erro FET")
-                        }
-                    })
-                    .catch(function (resposta) {
-                        console.log(`#ERRO: ${resposta}`);
-                    });
-
-            }
-        
 
 
     </script>
