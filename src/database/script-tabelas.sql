@@ -62,14 +62,33 @@ JOIN evolucao e
 ON idmascote = fkmascote;
 
 
-SELECT COUNT(acao) Comida
+SELECT 
+COUNT(acao) Comida
 FROM evolucao
-WHERE acao = 'Comida' AND fkmascote = 1;
+WHERE acao = 'Comida' AND fkmascote = 1
+GROUP BY 'Comida';
 
-SELECT COUNT(acao) Agua
+SELECT
+COUNT(acao) Agua
 FROM evolucao
-WHERE acao = 'Água' AND fkmascote = 1;
+WHERE acao = 'Água' AND fkmascote = 1
+GROUP BY 'Água';
 
-SELECT COUNT(acao) Carinho
+SELECT 
+COUNT(acao) Carinho
 FROM evolucao
-WHERE acao = 'Carinho' AND fkmascote = 1;
+WHERE acao = 'Carinho' AND fkmascote = 1
+GROUP BY 'Carinho';
+
+SELECT
+COUNT(acao) AS clique,
+acao AS situacao
+FROM evolucao
+GROUP BY acao;
+
+
+select * from  evolucao;
+select * from  usuario;
+select * from  mascote;
+
+

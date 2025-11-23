@@ -40,11 +40,6 @@
             </a>
         </div>
 
-        <div class="btn-nav-white">
-            <a href="./perfil.html">
-                <h3>Perfil</h3>
-            </a>
-        </div>
 
         <div class="btn-logout" onclick="limparSessao()">
             <h3>Sair</h3>
@@ -188,39 +183,6 @@
 
                     acaoVar: acao,
                     xpVar: nivel
-                }),
-            })
-                .then(function (resposta) {
-                    console.log("resposta: ", resposta);
-                    console.log(`ENTREI FUNCTION`);
-
-                    if (resposta.ok) {
-
-                        console.log("ok FET")
-
-
-                    } else {
-                        console.log("Erro FET")
-                    }
-                })
-                .catch(function (resposta) {
-                    console.log(`#ERRO: ${resposta}`);
-                });
-
-        }
-
-
-
-        //CADASTRO NO BD MASCOTE
-        function cadastrar() {
-            fetch('/mascote/cadastrar', {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-
-                    nivelVar: nivel
                 }),
             })
                 .then(function (resposta) {

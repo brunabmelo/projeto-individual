@@ -40,11 +40,7 @@
 
             </div>
 
-            <div class="btn-nav-white">
-                <a href="./perfil.html">
-                    <h3>Perfil</h3>
-                </a>
-            </div>
+            
 
             <div class="btn-logout" onclick="limparSessao()">
                 <h3>Sair</h3>
@@ -69,46 +65,52 @@
 
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
+    //PEGA OS DADOS
     function obterDados() {
+
+        fetch('/grafico/grafico')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (dados) {
+                plotarGraficoPizza(dados);
+            })
+            .catch(function (err) {
+                console.log(err);
+            })
+
         /*
-       fetch('/grafico/grafico')
-           .then(function (response) {
-               return response.json();
-           })
-           .then(function (data) {
-               plotarGraficoPizza(data);
-           })
-           .catch(function (err) {
-               console.log(err);
-           })
+                var dados = [{
+                    situacao: 'Comida',
+                    clique: 10
+                },
+                {
+                    situacao: 'Água',
+                    clique: 5
+                },
+                {
+                    situacao: 'Carinho',
+                    clique: 15
+                },
+                ]
+        
+       plotarGraficoPizza(dados);
+       */
 
-        */
-
-        var dados = [{
-            situacao: 'Comida',
-            clique: 10
-        },
-        {
-            situacao: 'Água',
-            clique: 5
-        },
-        {
-            situacao: 'Carinho',
-            clique: 15
-        },
-        ]
-
-        plotarGraficoPizza(dados);
     }
+
+
 
     function plotarGraficoPizza(dados) {
         var cliques = [];
-        var condicao = [];
+        var labels = [];
+        console.log(dados)
 
-        // Preenchendo os arrays com os dados
+        // VERIFICA A POSSIÇÃO DE CADA ARRAY
         for (var i = 0; i < dados.length; i++) {
             cliques.push(dados[i].clique);
-            condicao.push(dados[i].situacao);
+            labels.push(dados[i].situacao);
+
         }
 
         // Capturando o elemento canvas pelo id 
@@ -116,10 +118,10 @@
         var myChart = new Chart(ctx, {
             type: 'pie', // Tipo de gráfico: Pizza/torta
             data: { // Dados para o gráfico
-                labels: condicao, // Rótulos no eixo X
+                labels: labels, // NOME DE CADA PARTE DO GRAFICO
                 datasets: [{
-                    label: 'Quantidade', // Nome do grafico de clique (caixinha)
-                    data: cliques, // Dados quantia de cliques
+                    label: 'Quantidade', // NOME QUANTIA DE CLIQUE (caixinha)
+                    data: cliques, // DADOS DA QUANTIDADE DE CLIQUES
                     backgroundColor: [
                         'rgb(255, 99, 132)',// Cor do grafico
                         'rgb(54, 162, 235)',

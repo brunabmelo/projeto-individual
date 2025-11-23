@@ -2,7 +2,8 @@ var database = require("../database/config")
 
 function grafico() {
     var instrucao = `
-        SELECT * FROM evolucao ;
+    SELECT COUNT(acao) AS clique, acao AS situacao FROM evolucao GROUP BY acao;
+       
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
