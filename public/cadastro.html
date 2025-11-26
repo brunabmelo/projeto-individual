@@ -58,15 +58,8 @@
       <div class="card card-cadastro">
         <h2>Cadastro</h2>
         <div class="formulario">
-          <!--
-                         Para inserir mais um campo, copie uma das inputs abaixo.
-                         Assim que inserir vá para o script abaixo.
-                     -->
 
-          <!--  <div class="campo">
-            <span>Código de ativação:</span>
-            <input id="codigo_input" type="text" placeholder="Insira aqui seu código" />
-          </div>-->
+          <!--CAMPOS DE CADASTRO -->
           <div class="campo">
             <span>Nome:</span>
             <input id="nome_input" type="text" placeholder="Nome" />
@@ -93,6 +86,7 @@
         <div id="div_aguardar" class="loading-div">
           <img src="./assets/aguarde-eevee.gif" id="loading-gif" />
         </div>
+        <div style="color: #904101" id="mensagem_sucesso"></div>
         <div style="color:red" id="mensagem_erro"></div>
         <div style="color:red" id="div_erros_login"></div>
       </div>
@@ -146,6 +140,16 @@
       setInterval(sumirMensagem, 5000);
     }
 
+    // Verificando se a senha estão iguais
+    if(emailVar.includes('@')){
+       setInterval(sumirMensagem, 5000);
+    }else{
+      mensagem_erro.innerHTML =
+        "*Digite um e-mail válido";
+      finalizarAguardar();
+      return false;
+    }
+
 
 
     // Enviando o valor da nova input
@@ -169,7 +173,7 @@
         if (resposta.ok) {
 
 
-          mensagem_erro.innerHTML =
+          mensagem_sucesso.innerHTML =
             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
           setTimeout(() => {

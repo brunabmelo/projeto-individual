@@ -67,9 +67,11 @@
 
     //PEGA OS DADOS
     function obterDados() {
+        var idusuario = sessionStorage.ID_USUARIO
 
-        fetch('/grafico/grafico')
+        fetch(`/grafico/buscar/${idusuario}`)
             .then(function (response) {
+                console.log(response)
                 return response.json();
             })
             .then(function (dados) {

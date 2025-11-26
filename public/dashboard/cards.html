@@ -10,7 +10,6 @@
 
 
     <link rel="stylesheet" href="./../css/dashboards.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
     <script src="../js/sessao.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
@@ -174,13 +173,15 @@
         //CADASTRO NO BD EVOLUÇÃO
 
         function cadastrar() {
-            fetch('/grafico/cadastrar', {
+            var idusuario = sessionStorage.ID_USUARIO;
+
+            fetch(`/grafico/cadastrar/${idusuario}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-
+                    idusuario: idusuario,
                     acaoVar: acao,
                     xpVar: nivel
                 }),
