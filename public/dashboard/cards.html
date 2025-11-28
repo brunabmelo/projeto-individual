@@ -59,6 +59,7 @@
 
             </div>
         </div>
+        <div><span id="kpi">0</span>%</div>
 
         <div id="pet">
             <img src="../assets/pet/Eevee-normal.png">
@@ -69,7 +70,6 @@
             <button class="botao" onclick="Agua()" id="botaos" value="água">Água</button>
             <button class="botao" onclick="Carinho()" id="botaos" value="carinho">Carinho</button>
         </div>
-        <div id="msg"></div>
 
     </div>
 
@@ -86,6 +86,7 @@
         var agua = 0;
         var carinho = 0;
         var acao = "";
+        var porcetagem;
 
         // AÇÃO COMIDA
         function Comida() {
@@ -100,9 +101,11 @@
                 progresscontagem.style.width = progresscontagem.offsetWidth + 50 + "px";
                 comida++;
 
+                porcetagem = (comida/18)*100;
+
                 function atualizar() {
                     nivel = progresscontagem.clientWidth;
-                    msg.innerHTML = nivel
+                   kpi.innerHTML = porcetagem.toFixed(2);
                 }
                 atualizar()
                 cadastrar()
@@ -125,7 +128,7 @@
 
                 function atualizar() {
                     nivel = progresscontagem.clientWidth;
-                    msg.innerHTML = nivel
+                   
                 }
                 atualizar()
                 cadastrar()
@@ -148,7 +151,7 @@
 
                 function atualizar() {
                     nivel = progresscontagem.clientWidth;
-                    msg.innerHTML = nivel
+                    
                 }
                 atualizar()
                 cadastrar()
