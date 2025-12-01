@@ -100,7 +100,7 @@
                 acao = "Comida"
 
                 pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
-                setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
+                setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 500);
 
                 progresscontagem.style.width = progresscontagem.offsetWidth + 50 + "px";
                 comida++;
@@ -125,7 +125,7 @@
             } else {
                 acao = "Água"
                 pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
-                setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
+                setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 500);
 
                 progresscontagem.style.width = progresscontagem.offsetWidth + 50 + "px";
                 agua++;
@@ -151,7 +151,7 @@
                 acao = "Carinho"
 
                 pet.innerHTML = `<img src="../assets/pet/Eevee-feliz.png">`
-                setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 1000);
+                setTimeout(function () { pet.innerHTML = `<img src="../assets/pet/Eevee-normal.png">` }, 500);
 
                 progresscontagem.style.width = progresscontagem.offsetWidth + 50 + "px";
                 carinho++;
@@ -166,21 +166,29 @@
                 }
                 atualizar()
                 cadastrar()
-
             }
+
+            
         }
         // EVOLUÇÃO
         function evolucao() {
 
             if (comida > agua && comida > carinho) {
-                pet.innerHTML = `<img src="../assets/logo/iconLogo-2.png">`
+                pet.innerHTML = `<img src="../assets/pet/flareon.png">`
+                progresscontagem.style.background = "#E0482A"
             }
             else if (agua > comida && agua > carinho) {
-                pet.innerHTML = `<img src="../assets/logo/iconLogo-4.png">`
+                pet.innerHTML = `<img src="../assets/pet/vaporeon.png">`
+                progresscontagem.style.background = "#2E94BC"
             }
             else if (carinho > comida && carinho > agua) {
 
-                pet.innerHTML = `<img src="../assets/logo/iconLogo-3.png">`
+                pet.innerHTML = `<img src="../assets/pet/jolteon.png">`
+                progresscontagem.style.background = "#F9E85C"
+            }else{
+
+                pet.innerHTML = `<img src="../assets/pet/umbreon.png">`
+                progresscontagem.style.background = "#3F4B50"
             }
         }
 
