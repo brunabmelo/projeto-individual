@@ -1,3 +1,4 @@
+-- COPIAR ESTA PARTE DO ARQUIVO PARA O BD
 CREATE DATABASE myeevee;
 USE myeevee;
 
@@ -20,6 +21,9 @@ CREATE TABLE evolucao (
 		FOREIGN KEY (fkusuario)
 		REFERENCES usuario(idusuario)
 );
+-- FINAL DA PARTE COPIADA
+
+-- INSERT PARA TESTES
 INSERT INTO usuario (nome, sobrenome, email, senha) VALUES
 ('Adm', 'Teste', 'adm', 1234);
 
@@ -61,8 +65,7 @@ WHERE acao = 'Carinho'
 GROUP BY 'Carinho';
 
 
-
--- SELECT DO GAFICO POR FK
+-- SELECT DO GAFICO POR FK (UTILIZAR ESTE SELECT NO PARA RECEBER O RESULTADO DO GRÁFICO)
  SELECT 
 COUNT(acao) AS clique, 
 acao AS situacao

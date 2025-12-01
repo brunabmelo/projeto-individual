@@ -120,10 +120,10 @@ body {
 /* BARRA DE XP */
 
 .dash {
-  width: 80%;
+  width: 60%;
   position: relative;
   top: 0;
-  left: 20%;
+  left: 30%;
   background-color: #fff;
   height: 100vh;
   overflow: auto;
@@ -159,6 +159,27 @@ body {
   width: 0%;
   height: 15px;
   background: #e3b062;
+}
+
+/* KPI */
+
+.kpi-box {
+  display: flex;
+  width: 15%;
+  height: 15%;
+  margin: auto;
+  margin-top: 10px;
+  background-color: #904101;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.kpi-text {
+      text-align: center;
+    font-weight: 600;
+    color: #fff;
+    padding: 25px;
+    font-size: 45px;
 }
 
 /* PET | EEVEE */

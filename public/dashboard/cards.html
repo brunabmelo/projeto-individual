@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
-<!--<body onload="validarSessao(),  atualizacaoPeriodica()">-->
+<body onload="validarSessao(),  atualizacaoPeriodica()">
 
 <!--MENU SITE-->
 <div class="janela">
@@ -59,7 +59,11 @@
 
             </div>
         </div>
-        <div><span id="kpi">0</span>%</div>
+        <div class="kpi-box">
+            <div class="kpi-text">
+                <span id="kpi">0</span>%
+            </div>
+        </div>
 
         <div id="pet">
             <img src="../assets/pet/Eevee-normal.png">
@@ -101,11 +105,11 @@
                 progresscontagem.style.width = progresscontagem.offsetWidth + 50 + "px";
                 comida++;
 
-                porcetagem = (comida/18)*100;
+                porcetagem = ((comida + agua + carinho) / 13) * 100;
 
                 function atualizar() {
                     nivel = progresscontagem.clientWidth;
-                   kpi.innerHTML = porcetagem.toFixed(2);
+                    kpi.innerHTML = porcetagem.toFixed(0);
                 }
                 atualizar()
                 cadastrar()
@@ -126,9 +130,12 @@
                 progresscontagem.style.width = progresscontagem.offsetWidth + 50 + "px";
                 agua++;
 
+                porcetagem = ((comida + agua + carinho) / 13) * 100;
+
                 function atualizar() {
                     nivel = progresscontagem.clientWidth;
-                   
+                    kpi.innerHTML = porcetagem.toFixed(0);
+
                 }
                 atualizar()
                 cadastrar()
@@ -149,9 +156,13 @@
                 progresscontagem.style.width = progresscontagem.offsetWidth + 50 + "px";
                 carinho++;
 
+                porcetagem = ((comida + agua + carinho) / 13) * 100;
+
+
                 function atualizar() {
                     nivel = progresscontagem.clientWidth;
-                    
+                    kpi.innerHTML = porcetagem.toFixed(0);
+
                 }
                 atualizar()
                 cadastrar()
